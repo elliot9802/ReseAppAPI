@@ -1,0 +1,19 @@
+﻿In Windows, open PMC and ensure that the Class Library project, DbContext, is the default project.
+
+Windows Database migrations.
+----------------------------------
+On Windows in the PCM terminal, type below commands. After each migration you will get a success confirmation from EFC.
+Use command depending on your database.
+
+SQLServer:
+add-migration initial_migration -context SqlServerDbContext -outputdir Migrations/SqlServerMigrations
+
+
+
+Windows Commit the migrations to the Database (create or update the databases).
+----------------------------------------------------------------------------
+
+On Windows in the PCM terminal, type below commands. After each migration you will get a success confirmation
+SQLServer:
+update-database -context SqlServerDbContext
+
